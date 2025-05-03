@@ -15,7 +15,7 @@ document.getElementById("feedback-form").addEventListener("submit", function (ev
         return;
     }
 
-    fetch("http://localhost:5000/api/feedback", {
+    fetch("https://yash-port-backend.onrender.com/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),
@@ -31,7 +31,7 @@ document.getElementById("feedback-form").addEventListener("submit", function (ev
 
 // Function to Fetch and Display Feedback
 function loadFeedback() {
-    fetch("http://localhost:5000/api/feedback")
+    fetch("https://yash-port-backend.onrender.com/api/feedback")
     .then(response => response.json())
     .then(feedbacks => {
         let feedbackContainer = document.getElementById("feedback-list");

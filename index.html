@@ -321,14 +321,18 @@
 }
 
   /* Contact Me Section */
-.contact-me {
-    text-align: center;
-    margin: 50px 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-}
 
+ .contact-me {
+    text-align: center;
+    margin: 50px auto;
+    padding: 50px 20px;
+    background: #545454;
+    background: linear-gradient(to bottom, #545454, #545454);
+    color: white;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 /* Heading Styling */
 .contact-me h2 {
     font-size: 2rem;
@@ -355,16 +359,7 @@
 }
    
 
-   .contact-me {
-    text-align: center;
-    margin: 50px auto;
-    padding: 50px 20px;
-    background: linear-gradient(#545454);
-    color: white;
-    border-radius: 15px;
-    max-width: 600px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+  
 
 /* Heading & Text */
 .contact-me h2 {
@@ -418,7 +413,8 @@
     max-width: 600px;
     margin: 50px auto;
     padding: 40px;
-    background: linear-gradient( #545454);
+    background: #545454;
+    background: linear-gradient(to bottom, #545454, #545454);
     color: white;
     border-radius: 15px;
     border: #d4af37;
@@ -449,7 +445,7 @@
 /* Input Fields */
 .input-group input,
 .input-group textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -485,8 +481,8 @@
 .feedback-section button {
     background:  #b49326;
     color: white;
-    width: 250px;
-    margin-left: 134px;
+    margin: 20px auto;  /* ✅ Perfect centering */
+    width: fit-content; /* ✅ Button width only as per content */
     font-size: 1.2rem;
     border: none;
     padding: 12px;

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Yash Paithane's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+        html{
+          scroll-behavior: smooth;
+        }
+
+        body {
+            
+            color: #333333;
+            max-width: 150vw;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            padding-top: 90px; /* Adjust this based on navbar height */
+          
+            
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 85px;
+            background-color:#333333;;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ /* Hide nav links on small screens initially */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* When toggled, show the nav links */
+.nav-links.mobile-menu {
+  display: flex;
+}
+
+
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+
+        }
+        ul{
+            list-style: none;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:#ffffff;
+        }
+        nav ul li a:hover{
+            color: rgb(182, 145, 42);
+            font-size: 1.02rem;
+        }
+
+        .navo{
+    position: fixed;  /* Keeps it fixed at the top */
+    top: 0;           /* Sticks to the top */
+    left: 0;
+    width: 100%;      /* Full width */
+    background: #333333(30, 41, 59, 0.9); /* Semi-transparent dark background */
+    padding: 15px 20px;
+    z-index: 1000;    /* Ensures it stays above everything */
+    transition: background 0.3s ease; /* Smooth effect */
+   }
+        .left{
+            font-size: 1.5rem;
+            color: #f4f4f4;
+        }
+        .first{
+            display: flex;
+            justify-content: space-around;
+            
+            margin: 130px 0;
+            
+         }
+        .first div >{
+            width: 100%;
+            
+        }
+        .leftsection{
+            
+            font-size: 2rem;
+            margin-top: 45px;
+             }
+             .absd{
+              font-size: 22px;
+              margin-top: 35px;
+              font-weight: 600;
+              align-items: left;
+             }
+          .para{
+          max-width: 600px;
+          justify-content: left;
+          justify-items: auto;
+          font-size: 20px;
+          margin-top: 27px;
+        }
+        .rightsection{
+            
+            justify-content: right;
+            margin-top: 85px;
+            
+            
+        }
+        .rightsection img{
+            width: 100%px;
+            margin: 0px;
+            position: relative;
+            margin-top: -95px;
+            border-radius: 7%;
+            transition: all 0.5s ease-in-out;
+             }
+             .rightsection img:hover {
+  border: 2px solid #c5b613; /* Neon blue effect */
+  transform: scale(1.05);
+  
+}
+        .yello{
+            color: rgb(172, 153, 31);
+        }
+        #element{
+            color: rgb(172, 153, 31);
+          }
+        
+        .second{
+            width: 100wh;
+            margin-left: 135px;
+            height: 90vh;
+        }
+        
+        .leftsection2{
+          position: relative;
+          text-align: left;
+          margin: 0;
+          padding: 0;
+        }
+       
+        main hr{
+            width: 90%;
+            border: 0;
+            background:black ;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+        .sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20 {
+            color: aliceblue;
+        }
+
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #c8c8c8bc; /* Light grey background */
+      color: #333; /* Dark text for readability */
+    }
+
+
+    
+  .skills-section,
+  .projects-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    padding-top: 120px; /* Space from the fixed navbar */
+  }
+    
+
+    
+    /* Remove the last vertical line for the last container */
+    .button-container:last-child {
+      border-right: none;
+    }
+
+    
+      
+      .button-container {
+        border-right: none; /* No lines on small screens */
+        height: auto; /* Allow container to adjust height based on content */
+      }
+    
+
+     /* Center Only the Projects Section */
+     .projects-container {
+            text-align: center;
+            margin-top: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .projects-section img {
+    width: 100%;
+    height: auto;
+  }
+
+        /* Project Cards Layout */
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px;
+            gap: 70px;
+        }
+
+        .project-card {
+            background: rgb(199, 199, 199);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            width: 720px;
+            max-width: 1200px;
+            text-align: left;
+            border: 2px solid black;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .project-card:hover {
+  border: 2px solid #b0c11a; /* Light cyan border */
+  transform: scale(1.03);
+  
+}
+
+        .projects-container img {
+      
+          
+    display: block;
+    margin: 20px auto;/* Centers image */
+    width: 90%; /* Adjust size */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 10px;
+    max-width: 1000px;
+
+            
+        }
+
+        .project-card h3 {
+            margin: 10px 0;
+        }
+
+        .project-card p {
+            white-space: pre-wrap; /* Ensures long text wraps */
+            word-wrap: break-word;
+            max-height: 200px; /* Prevents overflow */
+            overflow-y: auto; /* Scroll if text is too long */
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background: #161718;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .project-card a:hover {
+            background: #c8bdbd;
+        }
+
+       /* Center the heading */
+.certificate-section {
+    text-align: center;
+    margin: 50px 0;
+}
+.certificate-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Swiper Container */
+.mySwiper {
+    width: 60%;
+    height: 350px; /* Adjust height based on certificate size */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Make sure images fit properly */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures images don’t stretch */
+    border-radius: 10px;
+}
+
+  /* Contact Me Section */
+.contact-me {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+/* Heading Styling */
+.contact-me h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Style Icons */
+.social-icon img {
+    width: 50px; /* Adjust size */
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+   
+
+   .contact-me {
+    text-align: center;
+    margin: 50px auto;
+    padding: 50px 20px;
+    background: linear-gradient(#545454);
+    color: white;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading & Text */
+.contact-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-me p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Style Social Media Buttons */
+.social-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #b49326;;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+}
+
+/* Make Logos Look Good */
+.social-icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Feedback Section */
+.feedback-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient( #545454);
+    color: white;
+    border-radius: 15px;
+    border: #d4af37;
+    border-color: #d4af37;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading & Text */
+.feedback-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feedback-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Form Styling */
+.feedback-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: black;
+    background-color: #d4d4d4;
+    caret-color: black;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Placeholder Styling */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgb(60, 60, 60); /* Ensure placeholder is visible */
+    opacity: 1;
+}
+
+/* Textarea */
+.input-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Input Focus Effect */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #b5af33;
+    box-shadow: 0 0 10px rgba(194, 182, 7, 0.914);
+}
+
+/* Submit Button */
+.feedback-section button {
+    background:  #b49326;
+    color: white;
+    width: 250px;
+    margin-left: 134px;
+    font-size: 1.2rem;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover Effect */
+.feedback-section button:hover {
+    background:  #bd9c2d;
+    transform: scale(1.05);
+}
+
+/* Response Message */
+#response-message {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+#feedback-display {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.feedback-item {
+    background: #f4f4f4;
+    padding: 15px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(231, 227, 227, 0.1);
+}
+
+.feedback-item h4 {
+    color: #ffe7e7;
+}
+
+.feedback-item p {
+    font-size: 1.1rem;
+    color: #fffcfc;
+}
+
+.feedback-item small {
+    display: block;
+    margin-top: 5px;
+    color: #fffcfc;
+}
+
+/* Footer Styling */
+.footer {
+    background: #1e1e1e;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px 0;
+}
+
+.footer-left h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.footer-center h3,
+.footer-right h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin: 5px 0;
+}
+
+.footer-center ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-center ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 40px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+.footer {
+    background:  #333333; /* Grey background */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/*Skill section*/
+.skills-section {
+    /* Light grey background */
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #222;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+  
+  .section-description {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 50px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    text-align: left;
+  }
+  
+  .skills-column {
+    background: #545454;
+    padding: 24px;
+    border: 3.0px solid #dcdcdc; /* Outer border added */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-column:hover {
+    transform: translateY(-4px);
+    border-color: #d4af37;
+  }
+  
+  .skills-category {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #d2cccc;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #d4af37;
+    padding-bottom: 6px;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .skills-list li {
+    font-size: 1.02rem;
+    padding: 6px 0;
+    color: #dcd8d8;
+  }
+
+  .project-headings {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.menu-btn{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 40px;
+        cursor: pointer;
+        display: none;
+    }
+
+    /* Stylish Divider Line */
+.section-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #bd9c2d, #b4b3b3, #b49326);
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 5px;
+}
+
+  /* Mobile and Tablet Device */
+
+  @media only screen and (max-width:850px){
+
+   .left{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 20px;
+    z-index: 25;
+    
+   }
+    .navo{
+        
+        padding: 0;
+        position: relative;
+        
+    }
+    .nav-links {
+        
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        margin-top: -900px;
+        background-color: #333333;
+        left: 0;
+    top: 0;
+    z-index: 5;
+        transition:all 0.5s ease;
+    }
+    .nav-links.mobile-menu{
+        margin-top: 0;
+    }
+    .nav-links li{
+        margin: 13px auto;
+    }
+
+    .menu-btn {
+    z-index: 10; /* Stays on top */
+    position: absolute; /* Required for z-index to work */
+        top: 14px;
+        color: white;
+        display: block;
+  }
+
+  .first {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background: linear-gradient(145deg, #f4f4f4, #eaeaea);
+    animation: fadeIn 1.2s ease-in-out;
+    border-radius: 10px;
+  }
+
+  .leftsection {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+
+  .rightsection {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightsection img {
+    width: 85%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10%;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .rightsection img:hover {
+    transform: scale(1.05);
+  }
+
+  .para {
+    font-size: 13px;
+    margin-top: 15px;
+    padding: 0 20px;
+  }
+
+  .absd {
+    margin-top: 25px;
+    font-weight: bold;
+  }
+
+  .contact-me, .feedback-section {
+    padding: 20px 15px;
+    margin: 20px 10px;
+    border-radius: 12px;
+    max-width: 95%;
+  }
+
+  .contact-me h2,
+  .feedback-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-me p,
+  .feedback-section p {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-icon {
+    width: 55px;
+    height: 55px;
+    padding: 8px;
+  }
+
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feedback-section form {
+    gap: 10px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .feedback-section button {
+    font-size: 1rem;
+    padding: 10px;
+    width: 40%;
+    margin-left: 50;
+  }
+
+  #response-message {
+    font-size: 0.9rem;
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+    
+  }
+  
+
+
+
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navo">
+            <div class="left">Yash Paithane's Portfolio</div>
+            <div class="Right">
+                <ul class="nav-links" >
+                    <li><a href="#hom">Home</a></li>
+                    <li><a href="#skil">Skills</a></li>
+                    <li><a href="#proj">Projects</a></li>
+                    <li><a href="#certifi">Certificates</a></li>
+                    <li><a href="#contact me">Contact me</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    
+                </ul>
+                <img src="./interface.png" alt="" class="menu-btn">
+            </div>
+
+        </nav>
+    </header>
+<main>
+  <section id="hom"></section>
+    <Section class="first">
+        <div class="leftsection">
+            Hi, My name is <span class="yello">Yash</span>
+        <div>And I have an Expertise in </div> <span id="element"></span>
+        <div class="about me">
+          <h6 class="absd">About me :-</h6>
+          <p class="para">I am a passionate Computer Engineer with expertise in Full-Stack Web Development, Software Development, Artificial Intelligence, Database Management, and User Interface Design. I specialize in building scalable and efficient applications, leveraging cutting-edge technologies to create seamless user experiences. With a strong foundation in both front-end and back-end development, I thrive on solving complex problems and delivering innovative solutions.</p>
+        </div>
+        </div>
+        
+        <div class="rightsection">
+            <img src="yash.png.jpeg" alt="web Developer" width="400" height="400" >
+            
+        </div>
+        
+    </Section>
+    <hr class="section-divider">
+
+    <section id="skil" class="skills-section">
+        <div class="container">
+          <h2 class="section-title">Technical Skillset</h2>
+          <p class="section-description">Technologies I work with to build scalable and user-centric solutions.</p>
+      
+          <div class="skills-grid">
+            <div class="skills-column">
+              <h3 class="skills-category">Front-End</h3>
+              <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+      
+            <div class="skills-column">
+              <h3 class="skills-category">Back-End</h3>
+              <ul class="skills-list">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>REST APIs</li>
+              </ul>
+            </div>
+      
+            <div class="skills-column">
+              <h3 class="skills-category">Tools & Workflow</h3>
+              <ul class="skills-list">
+                <li>Git & GitHub</li>
+                <li>Postman</li>
+                <li>Chat GPT</li>
+                <li>Hugging Face</li>
+                <li>DeepSeek</li>
+              </ul>
+            </div>
+      
+            <div class="skills-column">
+              <h3 class="skills-category">Software Development</h3>
+              <ul class="skills-list">
+                <li>C language</li>
+                <li>Java (Core + OOP)</li>
+                <li>DSA (Java)</li>
+                <li>OOP Principles</li>
+                <li>Object-Oriented Design</li>
+                
+              </ul>
+            </div>
+      
+            <div class="skills-column">
+              <h3 class="skills-category">Database Handling</h3>
+              <ul class="skills-list">
+                <li>PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>SQL Queries</li>
+                <li>Database Schema Design</li>
+                <li>Data Normalization</li>
+              </ul>
+            </div>
+            <div class="skills-column">
+                <h3 class="skills-category">User Interface Tools </h3>
+                <ul class="skills-list">
+                  <li>Bootstrap</li>
+                  <li>TailWind CSS</li>
+                  <li>Canva</li>
+                  <li>Chakra UI</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </section>
+      <hr class="section-divider">
+
+    <section id="proj"></section>
+    <section class="third">
+
+      <div class="projects-container">
+        <div class="project-headings">
+            <h2 class="project-title">Featured Projects</h2>
+            <p class="project-subtitle">A showcase of impactful and practical full-stack solutions that I’ve built.</p>
+          </div>
+          
+        <div class="projects" id="projects-container"></div>
+        
+    </div>
+
+    <script>
+        // Array of major projects with detailed descriptions
+        const projects = [
+            {
+                title: "Speakease TTS:-",
+                image: "speakease.jpg",
+                description: "SpeakEase For Better English is a powerful Chrome extension designed to improve learning and pronunciation for students and individuals alike. With its simple hover or select feature, it reads text aloud, making it easier to understand tricky words and sentences. Perfect for students learning English, it helps with difficult pronunciations, boosting confidence and language skills. But it’s not just for students—SpeakEase is also a great tool for people with reading or speech disorders, like dyslexia. It adjusts the reading speed based on word complexity, making it easy for everyone to follow along. With support for multiple languages, including Indian languages and Italian, SpeakEase opens up a world of learning for users everywhere. Whether you’re improving your English or overcoming reading challenges, SpeakEase makes learning easier and more accessible for all.",
+                github: "https://github.com/your-username/project-one"
+            },
+            
+            {
+                title: "Motivational Quotes Generator:-",
+                image: "motivaitonal.jpg",
+                description: "It is an interactive web application that generates motivational quotes with a click of a button. Users can also add their own motivational thoughts, which are stored and displayed uniquely for them. The background image changes dynamically with each new quote, keeping the experience fresh and inspiring. Additionally, the project features background music for an uplifting atmosphere, with an option to play or pause it. The design is fully responsive, ensuring smooth functionality across desktops, tablets, and mobile devices. It’s built using HTML, CSS, and JavaScript, with a separate backend to handle user-submitted quotes. This project showcases my skills in frontend and backend integration, dynamic UI updates, and user interaction handling.",
+                
+            }
+        ];
+
+        // Select the projects container
+        const projectsContainer = document.getElementById("projects-container");
+
+        // Loop through the projects array and generate HTML
+        projects.forEach(project => {
+            const projectCard = document.createElement("div");
+            projectCard.classList.add("project-card");
+            projectCard.innerHTML = `
+                <img src="${project.image}" alt="${project.title}">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+               
+            `;
+            projectsContainer.appendChild(projectCard);
+        });
+    </script>
+
+    </section>
+    <hr class="section-divider">
+
+    <section id="certifi"</section>
+    <section class="four"> 
+
+      <div class="certificate-section">
+        <h2 class="certificate-heading">Certificates</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide"><img src="cert1.jpeg" alt="Certificate 3"></div>
+                <div class="swiper-slide"><img src="cert3.png" alt="Certificate 3"></div>
+                <div class="swiper-slide"><img src="cert4.png" alt="Certificate 4"></div>
+                <div class="swiper-slide"><img src="cert5.png" alt="Certificate 5"></div>
+                <div class="swiper-slide"><img src="cert6.png" alt="Certificate 6"></div>
+                <div class="swiper-slide"><img src="cert7.png" alt="Certificate 7"></div>
+                <div class="swiper-slide"><img src="cert8.png" alt="Certificate 8"></div>
+                <div class="swiper-slide"><img src="cert9.png" alt="Certificate 9"></div>
+             
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".mySwiper", {
+        loop: true, // Infinite scrolling
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000, // Auto-slide every 3 seconds
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1, // Show one certificate at a time
+        spaceBetween: 20, // Space between slides
+        effect: "slide", // Smooth horizontal slide effect
+    });
+});
+
+
+    </script>
+    </section>
+    <hr class="section-divider">
+
+    <section id="contact me"></section>
+    <section class="contact-me">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out through any of the platforms below.</p>
+      <div class="social-links">
+          <a href="https://www.instagram.com/yashpaithane07" target="_blank" class="social-icon instagram">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+          </a>
+          <a href="https://linkedin.com/in/yash-paithane-515261355" target="_blank" class="social-icon linkedin">
+
+              <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+          </a>
+          <a href="https://wa.me/8482868156" target="_blank" class="social-icon whatsapp">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          </a>
+      </div>
+  </section>
+  <hr class="section-divider">
+
+  
+    
+    <section id="feedback"</section>
+      <section class="feedback-section">
+        <h2>Give Your Feedback</h2>
+        <p>I'd love to hear your thoughts! Fill out the form below.</p>
+        
+        <form id="feedback-form">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group">
+                <textarea id="message" placeholder="Your Feedback" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        
+        <p id="response-message"></p> <!-- Response Message After Submission -->
+    </section>
+
+   
+
+  <section class="foot">
+   
+      <p class="footer">© 2025 Yash Paithane's Portfolio | All Rights Reserved.</p>
+  </footer>
+  
+  </section>
+  
+    
+      
+</main>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['Web Develpment.','Software Development. ','User Interface.','Database Handling.', 'Artificial Intelligence.'],
+      typeSpeed: 35,
+      loop: true, 
+    });
+  </script>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navlinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click',()=>{
+        navlinks.classList.toggle('mobile-menu')
+    })
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

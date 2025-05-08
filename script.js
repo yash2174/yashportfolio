@@ -49,4 +49,8 @@ function loadFeedback() {
         });
     })
     .catch(error => console.error("Error fetching feedback:", error));
-}
+    }
+    
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
